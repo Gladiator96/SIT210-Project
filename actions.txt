@@ -1,0 +1,33 @@
+function on_msg_receive (msg)
+      if msg.out then
+          return
+      end
+      if (msg.text=='Hello') then
+            send_msg (msg.from.print_name, 'Hi', ok_cb, false)
+      end
+      if (msg.text=='There') then
+            send_msg (msg.from.print_name, 'Here', ok_cb, false)
+      end
+      if (msg.text=='How are you?') then
+            send_msg (msg.from.print_name, 'Fine', ok_cb, false)
+      end
+end
+
+function on_our_id (our_id)
+end
+
+function on_secret_chat_update (user, what_changed)
+end
+
+function on_user_update (user, what_changed)
+end
+
+function on_chat_update (user, what_changed)
+end
+
+function on_get_difference_end ()
+end
+
+function on_binlog_replay_end ()
+end
+
